@@ -1,13 +1,12 @@
-p3terx大神一键编译脚本：https://github.com/P3TERX/Actions-OpenWrt.git
-coolsnowwolf大神的源码地址：https://github.com/coolsnowwolf/lede.git
-Lienol大神源码地址：https://github.com/Lienol/openwrt.git
-ctcgfw大神源码地址：https://github.com/immortalwrt/immortalwrt
-garypang13大神一键编译脚本：https://github.com/garypang13/Actions-OpenWrt
-tuanqing大神一栈式全自动构建脚本：https://github.com/tuanqing/mknop
-Hyy2001X大神脚本：https://github.com/Hyy2001X/AutoBuild-Actions
-感谢以上大神的脚本跟源码，也感谢各位曾经帮助过我的人！
-
-
+### 前言
+- p3terx大神一键编译脚本：https://github.com/P3TERX/Actions-OpenWrt.git
+- coolsnowwolf大神的源码地址：https://github.com/coolsnowwolf/lede.git
+- Lienol大神源码地址：https://github.com/Lienol/openwrt.git
+- ctcgfw大神源码地址：https://github.com/immortalwrt/immortalwrt
+- garypang13大神一键编译脚本：https://github.com/garypang13/Actions-OpenWrt
+- tuanqing大神一栈式全自动构建脚本：https://github.com/tuanqing/mknop
+- Hyy2001X大神脚本：https://github.com/Hyy2001X/AutoBuild-Actions
+- 感谢以上大神的脚本跟源码.
 
 # Actions-OpenWrt
 
