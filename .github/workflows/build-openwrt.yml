@@ -9,7 +9,6 @@
 #
 
 name: Build OpenWrt
-
 on:
   repository_dispatch:
   workflow_dispatch:
@@ -18,33 +17,44 @@ on:
         description: 'SSH connection to Actions'
         required: false
         default: 'false'
-
-
-#REPO_BRANCH	源码分支
-#FEEDS_CONF	自定义feeds.conf.default文件名
-#CONFIG_FILE	自定义.config文件名
-#DIY_P1_SH	自定义diy-part1.sh文件名
-#DIY_P2_SH	自定义diy-part2.sh文件名
-#UPLOAD_BIN_DIR	上传 bin 目录。即包含所有 ipk 文件和固件的目录。默认false
-#UPLOAD_FIRMWARE	上传固件目录。默认true
-#UPLOAD_COWTRANSFER	上传固件到奶牛快传。默认false
-#UPLOAD_WERANSFER	上传固件到 WeTransfer 。默认false
-#UPLOAD_RELEASE	上传固件到 releases 。默认false
-#TZ	时区设置
+### 环境变量设置
 env:
+  # 设备名称
+  DEFAULT_TARGET: Gl.MT200n
   REPO_URL: https://github.com/coolsnowwolf/lede
+  #REPO_BRANCH	源码分支
   REPO_BRANCH: master
+  #FEEDS_CONF	自定义feeds.conf.default文件名
   FEEDS_CONF: feeds.conf.default
+  #CONFIG_FILE	自定义.config文件名
   CONFIG_FILE: .config
+  #DIY_P1_SH	自定义diy-part1.sh文件名
   DIY_P1_SH: diy-part1.sh
+  #DIY_P2_SH	自定义diy-part2.sh文件名
   DIY_P2_SH: diy-part2.sh
+  #UPLOAD_BIN_DIR	上传 bin 目录。即包含所有 ipk 文件和固件的目录。默认false
   UPLOAD_BIN_DIR: true
+  #UPLOAD_FIRMWARE	上传固件目录。默认true
   UPLOAD_FIRMWARE: true
+  #UPLOAD_COWTRANSFER	上传固件到奶牛快传。默认false
   UPLOAD_COWTRANSFER: false
+  #UPLOAD_WERANSFER	上传固件到 WeTransfer 。默认false
   UPLOAD_WETRANSFER: false
-  UPLOAD_RELEASE: false
+  #UPLOAD_RELEASE	上传固件到 releases 。默认false
+  UPLOAD_RELEASE: false 
+# 源码仓库:分支
+# DEFAULT_SOURCE: coolsnowwolf/lede:master
+# 上传固件到 Github Artifacts
+#  UPLOAD_ARTIFACTS: false
+# 上传 bin 文件夹到 Github Artifacts
+#  UPLOAD_BIN_ARTIFACTS: false
+  # 删除无用文件以释放更多空间
+  DELETE_USELESS_FILES: true
+  # 删除早期的 workflow 任务
+  DELETE_OLD_WORKFLOW: true
+  #TZ	时区设置
   TZ: Asia/Shanghai
-
+### END
 jobs:
   build:
     runs-on: ubuntu-18.04
